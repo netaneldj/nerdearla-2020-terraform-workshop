@@ -1,5 +1,5 @@
 resource "github_repository" "sample_1" {
-  name        = var.repository_sample_1_name
+  name        = var.repository_sample_1_branch_dev
   description = "My first repository managed by Terraform"
 
   auto_init = true
@@ -10,6 +10,6 @@ resource "github_repository" "sample_1" {
 
 resource "github_branch" "development" {
   repository    = github_repository.sample_1.name
-  branch        = "development"
+  branch        = upper(var.repository_sample_1_branch_dev)
   source_branch = "main"
 }
