@@ -1,7 +1,7 @@
 variable "token" {
   description = "GitHub access token used to configure the provider"
   type        = string
-  default     = "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"
+  default     = "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"
 }
 
 variable "repository_sample_1_name" {
